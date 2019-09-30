@@ -1,4 +1,6 @@
+require "pry"
 class Owner
+<<<<<<< HEAD
  attr_accessor
  @@all = []
  def initialize(species = "human", name)
@@ -79,4 +81,36 @@ class Owner
      def list_pets
          "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
      end
+=======
+  #  attr_accessor :name, :species
+  @@all = []
+
+  def initialize(name, species = "human")
+    @name = name
+    @species = species
+    @@all << self
+
+  end
+
+    def name
+    @name
+  end
+
+  def species
+    @species
+  end
+
+  def say_species
+    return "I am a human."
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.count
+    self
+    binding.pry
+  end
+>>>>>>> 2a2cf35630aa5019ecaca61942f58a0cfd3a7d8a
 end
